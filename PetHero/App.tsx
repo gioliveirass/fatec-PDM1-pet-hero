@@ -1,7 +1,13 @@
-import {Text} from 'react-native';
+import Routes from './src/routes';
+import Header from './src/components/Header';
 
 const App = () => {
-  return <Text>aa</Text>;
+  return (
+    <>
+      <Header />
+      <Routes />
+    </>
+  );
 };
 
 export default App;
