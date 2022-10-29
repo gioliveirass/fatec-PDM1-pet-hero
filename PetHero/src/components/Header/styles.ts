@@ -15,6 +15,7 @@ export const Container = styled(View)`
 export const MyProfile = styled(Image)`
   width: 30px
   height: 30px
+  borderRadius: 15px
 `;
 
 export const Menu = styled(Image)`
