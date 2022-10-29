@@ -1,14 +1,15 @@
-import {Container, MyProfile, Icon, Left, Right} from './styles';
-import {menuIcon} from '../../assets/Icons';
+import {Container, MyProfile, Menu, Notification, Left, Right} from './styles';
+import {menuIcon, notificationIcon} from '../../assets/Icons';
 
 const Header = () => {
   return (
     <Container>
       <Left>
-        <Icon source={menuIcon} />
+        <Menu source={menuIcon} />
       </Left>
 
       <Right>
+        <Notification source={notificationIcon} />
         <MyProfile
           source={{
             uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
