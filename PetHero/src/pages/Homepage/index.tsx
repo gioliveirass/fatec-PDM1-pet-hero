@@ -1,7 +1,12 @@
 import {Text} from 'react-native';
+import {Container, Title} from './styles';
 
 const Homepage = () => {
-  return <Text>Homepage</Text>;
+  return (
+    <Container>
+      <Title>Homepage</Title>
+    </Container>
+  );
 };
 
 Homepage.navigationOptions = {
