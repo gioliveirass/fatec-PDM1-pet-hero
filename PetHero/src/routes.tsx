@@ -1,9 +1,9 @@
-import Homepage from './pages/Homepage';
+import Pets from './pages/Pets';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 
 const Routes = createAppContainer(
   createSwitchNavigator({
-    Homepage: Homepage,
+    Pets: Pets,
   }),
 );
 
