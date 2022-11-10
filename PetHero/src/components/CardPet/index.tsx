@@ -1,10 +1,10 @@
 import {Text} from 'react-native';
-import {Container} from './styles';
+import {Container, Image} from './styles';
 
 const CardPet = () => {
   return (
     <Container>
-      <Text>Oie</Text>
+      <Image />
     </Container>
   );
 };
