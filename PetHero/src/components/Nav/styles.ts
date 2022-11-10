@@ -7,9 +7,9 @@ interface ItemProps {
 }
 
 export const Container = styled(ScrollView)`
-  width: 85%
+  width: 100%
   height: 70px
-  margin: 24px
+  margin: 24px 0
   flexDirection: row
 `;
 
@@ -21,7 +21,7 @@ export const Item = styled(View)<ItemProps>`
   justifyContent: center;
 
   padding: 1px 14px
-  margin: 5px 9px
+  margin: 0 9px 0 0
 
   backgroundColor: ${props =>
     props.currentSection === props.label ? 'rgba(255, 115, 34, 0.2)' : '#FFFF'}

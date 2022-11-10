@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import styled from 'styled-components';
 
 export const Container = styled(View)`
@@ -14,3 +14,5 @@ export const Title = styled(Text)`
   color: #5F5B5B
   margin: 16px 0 0 0
 `;
+
+export const PetsContainer = styled(ScrollView)``;
