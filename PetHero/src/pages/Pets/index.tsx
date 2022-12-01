@@ -10,8 +10,10 @@ import {
   PetsContainer,
   NoPetsContainer,
 } from './styles';
+import Footer from '../../components/Footer';
+import {TouchableOpacity} from 'react-native';
 
-const Pets = () => {
+const Pets = ({navigation}: {navigation: any}) => {
   const [currentSection, setCurrentSection] = useState<string>('Todos');
   const labels = ['Todos', 'Gatos', 'Cães', 'Aves', 'Roedores'];
   const [pets, setPets] = useState<Pet[]>([]);
@@ -42,6 +44,10 @@ const Pets = () => {
           pets.map((pet, index) => <CardPet key={index} name={pet.name} />)
         )}
       </PetsContainer>
+
+      <TouchableOpacity onPress={() => navigation.navigate('CreatePet')}>
+        <Footer />
+      </TouchableOpacity>
     </Container>
   );
 };
