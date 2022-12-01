@@ -1,10 +1,10 @@
-import {Text} from 'react-native';
-import {Container, Image} from './styles';
+import {Container, Image, Title} from './styles';
 
-const CardPet = () => {
+const CardPet = ({name}: {name: string}) => {
   return (
     <Container>
       <Image />
+      <Title>{name}</Title>
     </Container>
   );
 };

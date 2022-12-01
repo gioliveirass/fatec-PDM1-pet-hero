@@ -1,16 +1,32 @@
-import {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Nav from '../../components/Nav';
 import CardPet from '../../components/CardPet';
 import Pet from '../../interfaces/pet';
-import {Container, Title, PetsContainer} from './styles';
+import PetRequests from '../../utils/requests/Pet.request';
+import {
+  Container,
+  Title,
+  NoPets,
+  PetsContainer,
+  NoPetsContainer,
+} from './styles';
 
 const Pets = () => {
   const [currentSection, setCurrentSection] = useState<string>('Todos');
   const labels = ['Todos', 'Gatos', 'Cães', 'Aves', 'Roedores'];
-  const pets = useState<Pet[]>([]);
+  const [pets, setPets] = useState<Pet[]>([]);
+
+  useEffect(() => {
+    getPets();
+  }, []);
 
   const onClick = (label: string) => {
     setCurrentSection(label);
+  };
+
+  const getPets = async () => {
+    const response = await PetRequests.getPets();
+    setPets(response);
   };
 
   return (
@@ -18,8 +34,13 @@ const Pets = () => {
       <Title>Pets.</Title>
       <Nav onclick={onClick} labels={labels} currentSection={currentSection} />
       <PetsContainer>
-        <CardPet />
-        <CardPet />
+        {pets.length === 0 ? (
+          <NoPetsContainer>
+            <NoPets>Nenhum pet foi encontrado.</NoPets>
+          </NoPetsContainer>
+        ) : (
+          pets.map((pet, index) => <CardPet key={index} name={pet.name} />)
+        )}
       </PetsContainer>
     </Container>
   );
