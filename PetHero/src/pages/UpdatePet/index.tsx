@@ -50,11 +50,11 @@ const UpdatePet = ({navigation}: {navigation: any}) => {
           <TouchableOpacityCustom onPress={() => navigation.navigate('Pets')}>
             <Back source={backBtn} />
           </TouchableOpacityCustom>
-          <Title>Cadastrar Pet</Title>
+          <Title>Editar dados do Pet</Title>
         </ContainerHeader>
 
         <Form>
-          <Label>Nome do pet*</Label>
+          <Label>Nome do pet</Label>
           <TextInputCustom onChangeText={text => setPetName(text)} />
 
           <Label>Sexo do pet</Label>

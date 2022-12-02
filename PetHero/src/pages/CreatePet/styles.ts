@@ -8,7 +8,7 @@ export const Container = styled(View)`
 `;
 
 export const ContainerButtons = styled(View)`
-  margin: 24px;
+  margin: 16px;
 `;
 
 export const ContainerHeader = styled(View)`

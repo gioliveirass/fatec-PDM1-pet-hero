@@ -44,7 +44,7 @@ const CreatePet = ({navigation}: {navigation: any}) => {
         </ContainerHeader>
 
         <Form>
-          <Label>Nome do pet*</Label>
+          <Label>Nome do pet</Label>
           <TextInputCustom onChangeText={text => setPetName(text)} />
 
           <Label>Sexo do pet</Label>
@@ -56,14 +56,15 @@ const CreatePet = ({navigation}: {navigation: any}) => {
           <Label>Raça do pet</Label>
           <TextInputCustom />
         </Form>
+
+        <ContainerButtons>
+          <Button
+            title="Cadastrar pet"
+            color="#5EBC82"
+            onPress={() => createPet()}
+          />
+        </ContainerButtons>
       </Container>
-      <ContainerButtons>
-        <Button
-          title="Cadastrar pet"
-          color="#5EBC82"
-          onPress={() => createPet()}
-        />
-      </ContainerButtons>
     </>
   );
 };
