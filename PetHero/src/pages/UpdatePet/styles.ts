@@ -1,4 +1,11 @@
-import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  TextInput,
+  Button,
+} from 'react-native';
 import styled from 'styled-components';
 
 export const Container = styled(View)`
@@ -8,7 +15,7 @@ export const Container = styled(View)`
 `;
 
 export const ContainerButtons = styled(View)`
-  margin: 24px;
+  margin: 16px;
 `;
 
 export const ContainerHeader = styled(View)`
@@ -53,4 +60,8 @@ export const TextInputCustom = styled(TextInput)`
   backgroundColor: #FEF6ED
   borderRadius: 12px
   border: 1px solid #FABD7C
+`;
+
+export const ButtonCustomn = styled(Button)`
+  margin: 18px 0;
 `;

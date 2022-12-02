@@ -1,10 +1,13 @@
-import {Container, Image, Title} from './styles';
+import {catImage} from '../../assets/Icons';
+import {Container, Image, Title, PetInfo} from './styles';
 
 const CardPet = ({name}: {name: string}) => {
   return (
     <Container>
-      <Image />
-      <Title>{name}</Title>
+      <Image resizeMode="cover" source={catImage} />
+      <PetInfo>
+        <Title>{name}</Title>
+      </PetInfo>
     </Container>
   );
 };

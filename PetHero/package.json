@@ -16,9 +16,11 @@
   },
   "dependencies": {
     "3": "^2.1.0",
+    "@react-native-picker/picker": "^2.4.8",
     "axios": "^1.2.0",
     "react": "18.1.0",
     "react-native": "^0.70.1",
+    "react-native-date-picker": "^4.2.6",
     "react-native-gesture-handler": "^2.6.2",
     "react-navigation": "^4.4.4",
     "styled-components": "^5.3.6"

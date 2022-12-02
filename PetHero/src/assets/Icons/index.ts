@@ -1,3 +1,9 @@
 export const menuIcon = require('./bar-chart.png');
 export const notificationIcon = require('./bell.png');
 export const createBtn = require('./create-btn.png');
+export const backBtn = require('./back-btn.png');
+export const catImage = require('./pet.jpg');
+export const homepageIcon = require('./Homepage.png');
+export const contatosIcon = require('./Contatos.png');
+export const itensIcon = require('./Itens.png');
+export const petsIcon = require('./Pets.png');

@@ -4,5 +4,4 @@ export default interface Pet {
   name: string;
   gender: 'F' | 'M';
   age: number;
-  weight: [date: Date, value: number];
 }

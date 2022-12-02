@@ -8,29 +8,39 @@ import {
   Label,
   TextInputCustom,
   ContainerButtons,
+  ButtonCustomn,
 } from './styles';
-import {Button} from 'react-native';
 import {useState} from 'react';
 import {backBtn} from '../../assets/Icons';
 import PetRequests from '../../utils/requests/Pet.request';
 
-const CreatePet = ({navigation}: {navigation: any}) => {
+const UpdatePet = ({navigation}: {navigation: any}) => {
   const [petName, setPetName] = useState<string>('');
 
   const createPet = async () => {
     const body = {
+      id: '124',
       name: petName,
       gender: 'F',
       type: 'Gato',
       birthday: 0,
     };
 
-    const response = await PetRequests.createPet(
+    const response = await PetRequests.updatePet(
+      body.id,
       body.name,
       body.gender,
       body.type,
       body.birthday,
     );
+  };
+
+  const deletePet = async () => {
+    const body = {
+      id: '124',
+    };
+
+    const response = await PetRequests.deletePet(body.id);
   };
 
   return (
@@ -56,20 +66,27 @@ const CreatePet = ({navigation}: {navigation: any}) => {
           <Label>Raça do pet</Label>
           <TextInputCustom />
         </Form>
+
+        <ContainerButtons>
+          <ButtonCustomn
+            title="Atualizar pet"
+            color="#5EBC82"
+            onPress={() => createPet()}
+          />
+
+          <ButtonCustomn
+            title="Deletar pet"
+            color="#EA6262"
+            onPress={() => deletePet()}
+          />
+        </ContainerButtons>
       </Container>
-      <ContainerButtons>
-        <Button
-          title="Cadastrar pet"
-          color="#5EBC82"
-          onPress={() => createPet()}
-        />
-      </ContainerButtons>
     </>
   );
 };
 
-CreatePet.navigationOptions = {
-  title: 'CreatePet',
+UpdatePet.navigationOptions = {
+  title: 'UpdatePet',
 };
 
-export default CreatePet;
+export default UpdatePet;
